@@ -1,0 +1,155 @@
+.arrowLeft {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    margin-left: 18px;
+    cursor: pointer;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 0 solid currentcolor;
+        border-width: 1.5px 0 0 1.5px;
+        content: '';
+    }
+}
+
+.arrowLeftDou {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 0 solid currentcolor;
+        border-width: 1.5px 0 0 1.5px;
+        content: '';
+    }
+    &::after {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 0 solid currentcolor;
+        border-width: 1.5px 0 0 1.5px;
+        content: '';
+    }
+}
+
+.arrowRight {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    margin-right: 18px;
+    cursor: pointer;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 0 solid currentcolor;
+        border-width: 0 1.5px 1.5px 0;
+        content: '';
+    }
+}
+
+.arrowRightDou {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 0 solid currentcolor;
+        border-width: 0 1.5px 1.5px 0;
+        content: '';
+    }
+    &::after {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 0 solid currentcolor;
+        border-width: 0 1.5px 1.5px 0;
+        content: '';
+    }
+}
+
+.container {
+    user-select: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 325px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.main {
+    padding: 12px;
+}
+
+.today {
+    user-select: none;
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+    &:active {
+        color: rgb(255, 0, 76);
+        text-shadow: 0 0 2px rgb(255, 0, 76);
+    }
+}
+
+.days {
+    cursor: default;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 12px;
+
+    .itemDay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 6px;
+}

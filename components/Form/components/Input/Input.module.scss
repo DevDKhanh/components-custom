@@ -1,0 +1,118 @@
+@import '../../../../../styles/color';
+
+.container {
+    font-size: 1.6rem;
+    & + .container {
+        margin-top: 20px;
+    }
+
+    .group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $neutral_2;
+        border-radius: 32px;
+
+        .inputGroup {
+            flex: 1;
+        }
+
+        .btn {
+            height: 100%;
+            padding: 7px 24px;
+            border-radius: 32px;
+            margin-right: 2px;
+            background-color: $neutral_2;
+            cursor: no-drop;
+            user-select: none;
+            color: $light;
+            transition: 0.3s;
+
+            &.active {
+                background-color: $primary_1;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                &:active {
+                    transform: scale(0.9);
+                }
+            }
+        }
+
+        .inputElement {
+            border: 1px solid transparent;
+            padding: 7px 24px;
+        }
+    }
+
+    .label {
+        font-weight: 500;
+    }
+
+    .inputGroup {
+        position: relative;
+    }
+
+    .toggleType {
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $secondary_2;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        font-size: 16px;
+        transform: translateY(-50%);
+    }
+
+    .inputElement {
+        width: 100%;
+        padding: 8px 24px;
+        border: 1px solid $neutral_2;
+        border-radius: 8px;
+        background-color: $neutral_2;
+        color: $light;
+    }
+
+    .note {
+        margin-left: 12px;
+    }
+
+    .errorText {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+}
+
+.error {
+    .errorText {
+        color: $primary_3_1;
+    }
+
+    .group {
+        border: 1px solid $primary_3_1;
+    }
+
+    .inputElement {
+        border: 1px solid $primary_3_1;
+        color: $primary_3_1;
+
+        &::placeholder {
+            color: $primary_3_1;
+        }
+    }
+
+    .toggleType {
+        color: $primary_3_1;
+    }
+}
+
+.focus {
+    .inputElement {
+        border: 1px solid $primary_1_1;
+    }
+}
